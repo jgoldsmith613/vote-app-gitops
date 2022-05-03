@@ -9,7 +9,7 @@ images:
 - digest: sha256:72d30938ae43e393a1fad14ac4cfcea8f01e44f748aea928a840ad2e1cd9a7e9
   name: quay.io/bluesman/vote-ui
   newName: quay.io/bluesman/vote-ui
-- digest: sha256:9b03448ec25361543ff53799bd8bfa467bb0ce1f49b704fb2226a9ddd5576539
+- digest: sha256:ff69ee2075aa9cbe6229158eab09800e12e0be9e76776eb747c210c344e27d50
   name: quay.io/jgoldsmith/vote-api
   newName: quay.io/jgoldsmith/vote-api
 - digest: sha256:c5b7bbf19815dae13663a635c0e5e087ac7be0c1b150aa2e970d56adf71cc9eb
