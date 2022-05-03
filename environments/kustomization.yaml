@@ -3,9 +3,9 @@ kind: Kustomization
 resources:
 - ../k8s/
 images:
-- digest: sha256:ff69ee2075aa9cbe6229158eab09800e12e0be9e76776eb747c210c344e27d50
+- digest: sha256:f115098984d54ea36a96b4000000940309c3c18a16f967b45e34b579b00c6e82
   name: quay.io/jgoldsmith/vote-api
   newName: quay.io/jgoldsmith/vote-api
-- digest: sha256:9cb5716f6da6baf558548ca8bd8b0a3b5592d8e30b1788bf58da832b7f8d1737
+- digest: sha256:96ce652ca4333811d185f0eedbdffb15e2ddc9c9220a85c8e1ba1547a86717dc
   name: quay.io/jgoldsmith/vote-ui
   newName: quay.io/jgoldsmith/vote-ui
