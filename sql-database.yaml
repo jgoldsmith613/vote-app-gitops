@@ -1,0 +1,37 @@
+apiVersion: postgres-operator.crunchydata.com/v1beta1
+kind: PostgresCluster
+metadata:
+  name: database
+spec:
+  port: 5432
+  dataSource:
+    pgbackrest:
+      stanza: db
+  standby:
+    enabled: true
+  userInterface:
+    pgAdmin:
+      replicas: 1
+  proxy:
+    pgBouncer:
+      port: 5432
+      replicas: 1
+  backups:
+    pgbackrest:
+      restore:
+        enabled: false
+  patroni:
+    leaderLeaseDurationSeconds: 30
+    port: 8008
+    switchover:
+      type: Switchover
+    syncPeriodSeconds: 10
+  instances:
+    - dataVolumeClaimSpec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+      replicas: 1
+  postgresVersion: 13
